@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1e293b;
+  --primary-foreground: #f8fafc;
+  --secondary: #64748b;
+  --accent: #3b82f6;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --background: #f1f5f9;
+  --card: #ffffff;
+  --border: #e2e8f0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--background);
+  color: var(--primary);
+  margin: 0;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-success {
+  @apply bg-green-600 text-white hover:bg-green-700;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.btn-warning {
+  @apply bg-amber-500 text-white hover:bg-amber-600;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+}
+
+.input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.table-container {
+  @apply overflow-x-auto;
+}
+
+table {
+  @apply w-full text-left;
+}
+
+th {
+  @apply px-4 py-3 bg-gray-50 text-gray-600 font-semibold text-sm uppercase tracking-wider;
+}
+
+td {
+  @apply px-4 py-4 border-t border-gray-100;
+}
+
+tr:hover td {
+  @apply bg-gray-50;
+}
+
+.badge {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-warning {
+  @apply bg-amber-100 text-amber-800;
+}
+
+.badge-danger {
+  @apply bg-red-100 text-red-800;
+}
+
+.sidebar-link {
+  @apply flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors;
+}
+
+.sidebar-link.active {
+  @apply bg-blue-50 text-blue-600 font-medium;
+}
